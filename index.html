@@ -71,32 +71,30 @@
   <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/26/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h2 id="document-analysis–Hybrid-page-layout-analysis-via-tab-stop-detection"><a href="#document-analysis–Hybrid-page-layout-analysis-via-tab-stop-detection" class="headerlink" title="document analysis–Hybrid page layout analysis via tab-stop detection"></a>document analysis–Hybrid page layout analysis via tab-stop detection</h2><p>标签：document processing</p>
+<h3 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h3><p>&emsp;&emsp;A new hybrid page layout analysis algorithm is proposed, which uses bottom-up methods to form an initial data-type hypothesis and locate the tab-stops that were used when the page was formatted. The detected tab-stops, are used to deduce the column layout of the page. The column layout is then applied in a top-down manner to impose structure and reading-order on the detected regions. The complete C++ source code implementation is available as part of the Tesseract open source OCR engine at <a href="https://github.com/tesseract-ocr/tesseract" target="_blank" rel="external">here</a> .</p>
+<h3 id="Past-Methods-1-Bottom-up"><a href="#Past-Methods-1-Bottom-up" class="headerlink" title="Past Methods 1: Bottom-up"></a>Past Methods 1: Bottom-up</h3><ul>
+<li>[x] Analyze groups of pixels or connected components to classify into text/image/graphic/blank/line</li>
+<li>[x] Spread/smear/anneal groups of pixels by some neighborhood voting scheme, morphology or voronoi/graph algorithms.</li>
+<li>[x] Find connected components of labels to group pixels into typed regions.</li>
+<li>[x] Box-up regions into rectangles where possible.</li>
+<li>[x] Morphological approach is very similar.</li>
+<li>[x] Hard to include knowledge like “Columns should usually be the same size.”</li>
+</ul>
+<h3 id="Past-Methods-2-Top-Down"><a href="#Past-Methods-2-Top-Down" class="headerlink" title="Past Methods 2: Top Down"></a>Past Methods 2: Top Down</h3><ul>
+<li>[x] Often starts with a (possibly pre-trained) model of layout, eg 2-column journal page</li>
+<li>[x] Attempts to cut the image into the required parts, either with recursive vertical/horizontal cuts, or finding rectangles of whitespace.</li>
+<li>[x] Methods usually fail on non-rectangular regions.</li>
+<li>[x] Methods can often only deal with pages that fit the model.<h3 id="New-Method-Hybrid"><a href="#New-Method-Hybrid" class="headerlink" title="New Method: Hybrid"></a>New Method: Hybrid</h3></li>
+</ul>
+<p>image–&gt; Bottom-Up-Style and Column Finding Via Tab-Stops–&gt;Find Cross-Column and Non-rectangular regions–&gt; Line-Spacing Model–&gt;Region/Text Lines    </p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/11/26/hello-world/" data-id="civzc39mg000050emwhinvvwz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/11/26/hello-world/" data-id="civzd5yfl0000twemowcbijgf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -136,7 +134,7 @@
       <ul>
         
           <li>
-            <a href="/2016/11/26/hello-world/">Hello World</a>
+            <a href="/2016/11/26/hello-world/">(no title)</a>
           </li>
         
       </ul>
